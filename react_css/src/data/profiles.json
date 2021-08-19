@@ -1,6 +1,27 @@
 [
     {
-        'name':'sadness',
-        
+        "name":"sadness",
+        "image":"sadness.png",
+        "info":"None of the other Emotions really understand what Sadness’s role is.Sadness would love to be more optimistic and helpful in keeping Riley happy, but she finds it so hard to be positive. Sometimes it seems like the best thing to do is just lie on the floor and have a good cry."
     },
+    {
+        "name":"joy",
+        "image":"joy.png",
+        "info":"Joy’s goal has always been to make sure Riley stays happy. She is lighthearted, optimistic and determined to find the fun in every situation. Joy sees challenges in Riley’s life as opportunities, and the less happy moments as hiccups on the way back to something great. As long as Riley is happy, so is Joy."
+    },
+    {
+        "name":"fear",
+        "image":"fear.png",
+        "info":"Fear’s main job is to protect Riley and keep her safe. He is constantly on the lookout for potential disasters, and spends time evaluating the possible dangers, pitfalls and risk involved in Riley’s everyday activities. There are very few activities and events that Fear does not find to be dangerous and possibly fatal."
+    },
+    {
+        "name":"disgust",
+        "image":"disgust.png",
+        "info":"Disgust is highly opinionated, extremely honest and prevents Riley from getting poisoned — both physically and socially. She keeps a careful eye on the people, places and things that Riley comes into contact with — whether that’s broccoli or last year’s fashion trend. Disgust always has the best of intentions and refuses to lower her standards."
+    },
+    {
+        "name":"anger",
+        "image":"anger.png",
+        "info":"Anger feels very passionately about making sure things are fair for Riley. He has a fiery spirit and tends to explode (literally) when things don’t go as planned. He is quick to overreact and has little patience for life’s imperfections."
+    }
 ]

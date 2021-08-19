@@ -1,0 +1,15 @@
+.card{
+    position: relative;
+    width: 535px;
+    border-radius: 30px;
+    padding: 2em;
+}
+
+.card p{
+    margin-top: 1em;
+    width: 75%;
+}
+
+.card img{
+    position: absolute;
+}

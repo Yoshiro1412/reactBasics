@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root{
+    --black: #393535;
+    --white: #ffffff;
+    
+    --sadness-darkblue: #094657;
+    --sadness-lightblue: #95d7ea;
+    --joy-darkgreen: #5c5f07;
+    --joy-lightgreen: #dee175;
+    --anger-darkred: #561709;
+    --anger-lightred: #eb4c29;
+    --fear-darkpurple: #631578;
+    --fear-lightpurple: #d0b6d7;
+    --disgust-darkgreen: #2e5c0d;
+    --disgust-lightgreen: #add78f;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    font-family: sans-serif;
+    background-color: var(--white);
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    padding: 2em;
+    /* hidde scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.svg{
+    fill: var(--black);
 }
