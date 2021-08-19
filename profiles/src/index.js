@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
+// Hello World
 function Welcome(props){
   // {} is use to put JS in the HTML
   return <h1>Hello, {props.name}</h1>;
 }
 
+// State
 class Clock extends React.Component {
 
   constructor(props){
@@ -39,6 +40,7 @@ class Clock extends React.Component {
   }
 }
 
+// Events
 class DarkMode extends React.Component {
   constructor(props){
     super(props);
@@ -67,6 +69,7 @@ class DarkMode extends React.Component {
   }
 }
 
+// Lists
 const todos = [
   { id:1, title: 'Learn React' },
   { id:2, title: 'Make the world shine' }
@@ -83,6 +86,7 @@ function ToDoList(props){
   )
 }
 
+// Forms
 class IKnow extends React.Component {
   constructor(props){
     super(props);
@@ -115,6 +119,102 @@ class IKnow extends React.Component {
   }
 }
 
+// Lifting 
+function toBits(Bytes){
+  return Bytes*8;
+}
+
+function toBytes(Bits){
+  return Math.floor(Bits/8);
+}
+
+function convert(value, convertion){
+  const input = parseInt(value);
+  if(Number.isNaN(input)){
+    return '';
+  }
+  const output = convertion(input);
+  return output.toString();
+}
+
+const convertions = {'b':'Bits','B':'Bytes'};
+
+class DataInput extends React.Component{
+  constructor(props){
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e){
+    this.props.handleChange(e.target.value);
+  }
+
+  render(){
+    const value = this.props.value;
+    const type = this.props.type;
+
+    return (
+      <fieldset>
+        <legend>Enter {convertions[type]}</legend>
+        <input value={value} onChange={this.handleChange} />
+      </fieldset>
+    )
+  }
+}
+
+class Calculator extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {value: 0, type: 'b'};
+    this.handleBitChange = this.handleBitChange.bind(this);
+    this.handleByteChange = this.handleByteChange.bind(this);
+  }
+
+  handleBitChange(value){
+    this.setState({value, type: 'b'});
+  }
+
+  handleByteChange(value){
+    this.setState({value, type: 'B'});
+  }
+
+  render(){
+    const type = this.state.type;
+    const value = this.state.value;
+    const bits = type === 'B' ? convert(value,toBits) : value;
+    const Bytes = type === 'b' ? convert(value,toBytes) : value;
+
+    return (
+      <div>
+        <DataInput type='b' value={bits} handleChange={this.handleBitChange}/>
+        <DataInput type='B' value={Bytes} handleChange={this.handleByteChange}/>
+      </div>
+    )
+
+  }
+}
+
+// Composition
+function Dialog(props){
+  return (
+    <div>
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      {props.children}
+    </div>
+  )
+}
+
+function JustFun(){
+  return (
+    <Dialog 
+    title = "Welcome"
+    content = "Hello there">
+      <input type="button" value="Just for fun" />
+    </Dialog>
+  )
+}
+
 function App(){
   return (
     <div>
@@ -125,6 +225,8 @@ function App(){
       <DarkMode />
       <ToDoList todos={todos} />
       <IKnow />
+      <Calculator />
+      <JustFun />
     </div>
   );
 }
