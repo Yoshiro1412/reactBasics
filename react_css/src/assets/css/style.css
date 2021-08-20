@@ -28,15 +28,10 @@ body{
     background-color: var(--white);
     font-family: 'Lato', sans-serif;
     width: 100%;
-    padding: 2em;
-    /* hidde scrollbar */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    padding: 2em 4em;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
+
 
 h2{
     font-size: 3em;
@@ -52,4 +47,19 @@ p{
 
 .svg{
     fill: var(--black);
+}
+
+.logo{
+    position: fixed;
+    top: 0;
+    left: 2rem;
+    width: 15rem;
+    z-index: -1;
+}
+
+.debug{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 10000;
 }

@@ -1,6 +1,7 @@
 .card{
     position: relative;
-    width: 535px;
+    min-width: 535px;
+    height: 342px;
     border-radius: 30px;
     padding: 2em;
 }
@@ -12,4 +13,59 @@
 
 .card img{
     position: absolute;
+}
+
+.card.sadness{
+    background-color: var(--sadness-lightblue);
+    color: var(--sadness-darkblue);
+}
+
+.card.sadness img{
+    top:-40%;
+    right: -25%;
+    width: 55%;
+}
+
+.card.joy{
+    background-color: var(--joy-lightgreen);
+    color: var(--joy-darkgreen);
+}
+
+.card.joy img{
+    top:-60%;
+    right: -20%;
+    width: 45%;
+}
+
+.card.disgust{
+    background-color: var(--disgust-lightgreen);
+    color: var(--disgust-darkgreen);
+}
+
+.card.disgust img{
+    top:-55%;
+    right: -30%;
+    width: 55%;
+}
+
+.card.fear{
+    background-color: var(--fear-lightpurple);
+    color: var(--fear-darkpurple);
+}
+
+.card.fear img{
+    top:-40%;
+    right: -20%;
+    width: 45%;
+}
+
+.card.anger{
+    background-color: var(--anger-lightred);
+    color: var(--anger-darkred);
+}
+
+.card.anger img{
+    top:-65%;
+    right: -40%;
+    width: 80%;
 }
