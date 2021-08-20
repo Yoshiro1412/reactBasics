@@ -1,27 +1,32 @@
 .card{
     position: relative;
-    min-width: 535px;
-    height: 342px;
+    min-width: 80vw;
+    height: auto;
     border-radius: 30px;
     padding: 2em;
 }
 
 .card p{
     margin-top: 1em;
-    width: 75%;
+    width: 100%;
+    font-size: 1em;
 }
 
 .card img{
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 210px;
 }
 
+/* character custome card */
 .card.sadness{
     background-color: var(--sadness-lightblue);
     color: var(--sadness-darkblue);
 }
 
 .card.sadness img{
-    top:-40%;
+    top: calc(-0.65 * 100vw);
     right: -25%;
     width: 55%;
 }
@@ -32,7 +37,7 @@
 }
 
 .card.joy img{
-    top:-60%;
+    top: calc(-0.74 * 100vw);
     right: -20%;
     width: 45%;
 }
@@ -43,7 +48,7 @@
 }
 
 .card.disgust img{
-    top:-55%;
+    top: calc(-0.7 * 100vw);
     right: -30%;
     width: 55%;
 }
@@ -54,7 +59,7 @@
 }
 
 .card.fear img{
-    top:-40%;
+    top: calc(-0.63 * 100vw);
     right: -20%;
     width: 45%;
 }
@@ -65,7 +70,70 @@
 }
 
 .card.anger img{
-    top:-65%;
+    top: calc(-0.75 * 100vw);
     right: -40%;
     width: 80%;
+    max-width: 300px;
+}
+
+/* Responsive */
+@media screen and (min-width: 450px){
+    .card p{
+        width: 65%;
+    }
+
+    .card:is(.sadness,.joy,.fear,.disgust) img{
+        left: 80%;
+        top: -50%;
+    }
+
+    .card.anger img{
+        left: 80%;
+        top: -50%;
+    }
+}
+
+@media screen and (min-width: 550px){
+    .card{
+        min-width: 535px;
+        height: 342px;
+    }
+
+    .card p{
+        font-size: 1.2rem;
+        width: 75%;
+    }
+
+    .card img{
+        max-width: none;
+        transform: none;
+    }
+
+    .card.anger img{
+        max-width: none;
+    }
+
+    .card:is(.sadness,.joy,.fear,.disgust,.card.anger) img{
+        left: auto;
+    }
+
+    .card.sadness img{
+        top:-40%;
+    }
+
+    .card.joy img{
+        top:-60%;
+    }
+
+    .card.disgust img{
+        top:-55%;
+    }
+    
+    .card.fear img{
+        top:-40%;
+    }
+
+    .card.anger img{
+        top:-65%;
+    }
 }

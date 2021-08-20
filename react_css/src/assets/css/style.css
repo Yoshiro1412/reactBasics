@@ -52,9 +52,19 @@ p{
 .logo{
     position: fixed;
     top: 0;
-    left: 2rem;
-    width: 15rem;
+    /* left: 2rem; */
+    left:0;
+    right: 0;
+    width: clamp(10rem,20%,30rem);
     z-index: -1;
+    margin: auto;
+}
+
+@media screen and (min-width: 550px) {
+    .logo{
+        right: auto;
+        left: 2rem;
+    }
 }
 
 .debug{
@@ -62,4 +72,8 @@ p{
     top:0;
     left: 0;
     z-index: 10000;
+}
+
+.rotate{
+    transform: rotate(180deg);
 }
